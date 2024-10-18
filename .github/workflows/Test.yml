@@ -1,0 +1,12 @@
+name : TestApp
+on : push
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout install
+            uses: actions/checkout@v4
+          - name: Install dependecies
+            run: npm ci
+          - name: Run test
+            run: npm run test
